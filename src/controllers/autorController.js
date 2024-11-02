@@ -1,4 +1,8 @@
-const getAllAutores = (req, res) => {
+const { selectAll } = require("../models/autorModel");
+
+const getAllAutores = async (req, res) => {
+  const result = await selectAll();
+  console.log(result);
   res.json({
     message: "recupero todos los autores",
   });
