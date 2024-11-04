@@ -7,3 +7,31 @@ GET {{url}}/autores/1
 
 ###
 GET {{url}}/posts
+
+###
+GET {{url}}/posts/autor/1
+
+###
+POST {{url}}/autores
+Content-Type: application/json
+
+{
+    "nombre": "Paloma",
+    "email":"paloma@gmail.com",
+    "imagen":"url imagen paloma"
+}
+
+###
+POST /api/posts
+Content-Type: application/json
+
+{
+    "descripcion": "historia del mundo",
+    "fecha_creaccion": "2024-11-03",
+    "categoria": "otros",
+    "post": "este es un post sobre la historia del mundo", 
+    "autor_id": "1"
+}
+
+
+
