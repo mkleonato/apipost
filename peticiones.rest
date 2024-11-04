@@ -22,12 +22,12 @@ Content-Type: application/json
 }
 
 ###
-POST /api/posts
+POST {{url}}/posts
 Content-Type: application/json
 
 {
     "descripcion": "historia del mundo",
-    "fecha_creaccion": "2024-11-03",
+    "fecha_creacion": "2024-11-03",
     "categoria": "otros",
     "post": "este es un post sobre la historia del mundo", 
     "autor_id": "1"

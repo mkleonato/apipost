@@ -1,4 +1,9 @@
-const { selectAllPosts, selectPostsByAutorId } = require("../models/postModel");
+const {
+  selectAllPosts,
+  selectPostsByAutorId,
+  selectByPostId,
+  insertPost,
+} = require("../models/postModel");
 
 const getAllPosts = async (req, res, next) => {
   try {
@@ -20,7 +25,18 @@ const getPostsByAutorId = async (req, res, next) => {
   }
 };
 
+const createPost = async (req, res, next) => {
+  try {
+    const [result] = await insertPost(req.body);
+    const post = await selectByPostId(result.insertId);
+    res.json(post);
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   getAllPosts,
   getPostsByAutorId,
+  createPost,
 };
