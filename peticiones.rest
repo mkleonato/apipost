@@ -3,9 +3,6 @@
 GET {{url}}/autores
 
 ###
-GET {{url}}/autores/1
-
-###
 GET {{url}}/posts
 
 ###
@@ -16,9 +13,9 @@ POST {{url}}/autores
 Content-Type: application/json
 
 {
-    "nombre": "Paloma",
+    "nombre": "Paloma Leonato",
     "email":"paloma@gmail.com",
-    "imagen":"url imagen paloma"
+    "imagen":"url imagen Leonato"
 }
 
 ###
@@ -26,11 +23,11 @@ POST {{url}}/posts
 Content-Type: application/json
 
 {
-    "descripcion": "historia del mundo",
-    "fecha_creacion": "2024-11-03",
-    "categoria": "otros",
-    "post": "este es un post sobre la historia del mundo", 
-    "autor_id": "1"
+    "descripcion": "dana en Valencia",
+    "fecha_creacion": "2024-10-29",
+    "categoria": "social",
+    "post": "sobre el desastre de la dana en Valencia", 
+    "autor_id": "3"
 }
 
 
