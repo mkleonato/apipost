@@ -1,87 +1,60 @@
-# Express Base Application for API Creation
+# ACTIVIDAD 8
 
-This is a basic Express application template designed to help you create APIs quickly. It includes essential configurations and setup for starting an Express server.
+## Creación de BBDD
 
-## Features
+La bd se llama **post** y crea dos tablas que se llaman: **post**y **autor**
 
-- Basic Express server setup
-- CORS enabled
-- Environment configuration with `.env` support
+![alt text](image.png)
 
-## Getting Started
+## Recuperar todos los autores del blog
 
-### Prerequisites
+GET /api/autores
+Body: X
+Headers: X
 
-Ensure you have Node.js and npm installed on your machine. You can download them from [Node.js official website](https://nodejs.org/).
+Respuesta:
 
-### Installation
+- Un array con todos los autores del blog
+- Si no hay autores, devuelve un array vacio
 
-1. **Clone the repository:**
+## Recuperar todos los posts del blog
 
-```bash
-git clone https://github.com/mariogiron/express-init-template.git project-name
-```
+GET /api/posts
+Body: X
+Headers: X
 
-2. **Navigate to the project directory:**
+Respuesta:
 
-```bash
-cd project-name
-```
+- Un array con todos los posts del blog
+- Si no hay posts, devuelve un array vacio
 
-3. **Install the dependencies:**
+## Recuperar todos los posts del blog de un autor_id concreto
 
-```bash
-npm install
-```
+GET /api/posts/autor/AUTOR_ID
+Body: X
+Headers: X
 
-### Environment Configuration
+Respuesta:
 
-Create a `.env` file in the root of the project and configure your environment variables. An example `.env` file might look like this:
+- Un array con todos los posts del blog de un autor concreto
+- Si no hay posts de ese autor, devuelve un array vacio
 
-```
-PORT=3000
-```
+## Insertar un nuevo autor
 
-### Running the Application
+POST /api/autores
+Body: nombre, email, imagen
+Headers: X
 
-#### Start the server
+Respuesta:
 
-Start the server by running:
+- Recibimos un objeto con los datos del nuevo autor creado
 
-```bash
-npm start
-```
+#· Insertar un nuevo post
 
-The server will start and listen on the port defined in your `.env` file, or default to port 3000 if not specified.
+POST /api/posts
+Body: descripcion, fecha_creaccion, ategoria, post, autor_id
+Headers: X
 
-#### Development mode
+Respuesta:
 
-To start the server in development mode with `nodemon`, which will automatically restart the server on file changes, run:
-
-```bash
-npm run dev
-```
-
-### Available Scripts
-
-- **start**: Runs `node index.js` to start the server.
-- **dev**: Runs `nodemon index.js` to start the server in development mode with automatic restarts on file changes.
-
-### Project Structure
-
-    ├── src
-    │   ├── app.js          # Express app configuration
-    │   ├── models          # Data models
-    │   ├── controllers     # Route controllers
-    │   ├── routes          # Application routes
-    ├── .env                # Environment variables
-    ├── index.js           # Server creation and configuration
-    ├── package.json        # Project metadata and dependencies
-
-### Contributing
-
-Feel free to submit issues and pull requests to improve the project. For major changes, please open an issue first to discuss what you would like to change.
-
-### License
-
-This project is licensed under the ISC License - see the LICENSE file for details.
+- Recibimos un objeto con los datos del nuevo post creado

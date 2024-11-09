@@ -13,9 +13,9 @@ POST {{url}}/autores
 Content-Type: application/json
 
 {
-    "nombre": "Paloma Leonato",
-    "email":"paloma@gmail.com",
-    "imagen":"url imagen Leonato"
+    "nombre": "Lourdes",
+    "email":"Lourdes @gmail.com",
+    "imagen":"url imagen Lourdes"
 }
 
 ###

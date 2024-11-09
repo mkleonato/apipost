@@ -4,9 +4,10 @@ const {
   getPostsByAutorId,
   createPost,
 } = require("../../controllers/postController");
+const { checkAutorId } = require("../../utils/middleware");
 
 router.get("/", getAllPosts);
-router.get("/autor/:autor_id", getPostsByAutorId);
+router.get("/autor/:autor_id", checkAutorId, getPostsByAutorId);
 
 router.post("/", createPost);
 
