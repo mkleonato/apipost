@@ -3,7 +3,9 @@
 const pool = require("../config/db");
 
 function selectAllPosts() {
-  return pool.query("select * from post;");
+  return pool.query(
+    "SELECT post.*, autor.* FROM post JOIN autor ON post.autor_id = autor.id;"
+  );
 }
 
 //select * from posts where autorId=2
