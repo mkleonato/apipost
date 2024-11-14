@@ -24,7 +24,7 @@ Headers: X
 
 Respuesta:
 
-- Un array con todos los posts del blog
+- Un array con todos los posts del blog y los datos de los autores
 - Si no hay posts, devuelve un array vacio
 
 ## Recuperar todos los posts del blog de un autor_id concreto
